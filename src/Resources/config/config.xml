@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>General</title>
+        <title lang="de-DE">Allgemeines</title>
+
+        <input-field type="bool">
+            <name>reviewActive</name>
+            <label>Show order review on finish page</label>
+            <label lang="de-DE">Bestellbewertung auf der Abschlusseite anzeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="int">
+            <name>reviewStarsQuantity</name>
+            <label>Number of stars for the rating</label>
+            <label lang="de-DE">Anzahl der Sterne für die Bewertung</label>
+            <defaultValue>3</defaultValue>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>reviewBackgroundColor</name>
+            <label>Rating background color</label>
+            <label lang="de-DE">Hintergrundfarbe der Bewertung</label>
+            <defaultValue>#dbe6db</defaultValue>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>reviewStarsColor</name>
+            <label>Rating stars color</label>
+            <label lang="de-DE">Hintergrundfarbe der Sterne</label>
+            <defaultValue>#a3a0a0</defaultValue>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>reviewButtonColor</name>
+            <label>Rating button color</label>
+            <label lang="de-DE">Farbe des Absendenbuttons</label>
+            <defaultValue>#7493A3</defaultValue>
+        </input-field>
+    </card>
+</config>

@@ -1,0 +1,42 @@
+{% sw_extends '@Storefront/storefront/page/checkout/finish/finish-details.html.twig' %}
+
+{% block page_checkout_finish_teaser %}
+    {{ parent() }}
+    {% if page.showOrderReview.reviewActive %}
+        <!-- Hidden elements for JavaScript plugin -->
+        <div class="finish-ordernumber" data-order-number="{{ page.order.orderNumber }}" style="display: none;"></div>
+        <div class="flashbags"></div>
+        
+        <div class="finish-raiting" style="background-color: {{ page.showOrderReview.reviewBackgroundColor }}">
+            <div class="finish-review-headline">{{ "zweipunkt.review.headline"|trans }}</div>
+            <div class="finish-review-description">{{ "zweipunkt.review.description"|trans }}</div>
+            <div class="point-container">
+                <div class="finish-reviews-stars-container">
+                    {% for i in 1..page.showOrderReview.reviewStarsQuantity %}
+                        <input type="radio" id="raitingStar{{ i }}" name="raitingStar" value="{{ i }}" />
+                        <label for="raitingStar{{ i }}" title="text">
+                            {% sw_icon 'star' style { 'size': size, 'pack': 'solid', color: page.showOrderReview.reviewStarsColor } %}
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="finish-reviews-show-after" style="display: none;">
+                <div class="finish-reviews-comment-container">
+                    <div class="finish-review-comment-headline">{{ "zweipunkt.review.comment"|trans }}</div>
+                    <textarea class="form-control"
+                              id="finishReviewContent"
+                              name="content"></textarea>
+                </div>
+                <div class="finish-reviews-button-container">
+                    <button
+                            type="submit"
+                            id="reviewSubmitButton"
+                            class="btn btn-primary finish-reviews-submit-button"
+                            style="background-color: {{ page.showOrderReview.reviewButtonColor }}; border-color: {{ page.showOrderReview.reviewButtonColor }}">
+                        {{ "zweipunkt.review.submitButton"|trans }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

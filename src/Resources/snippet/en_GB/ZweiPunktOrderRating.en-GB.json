@@ -1,0 +1,12 @@
+{
+  "zweipunkt": {
+    "review": {
+      "headline": "Give a rating!",
+      "description": "How do you rate the ordering process?",
+      "errorMessage": "Unfortunately, something went wrong when saving the rating.",
+      "successMessage": "Thank you for your review!",
+      "comment": "Would you like to give us additional feedback?",
+      "submitButton": "Submit"
+    }
+  }
+}

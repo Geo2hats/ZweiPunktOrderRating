@@ -1,0 +1,57 @@
+.finish-raiting {
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+  margin: 70px auto 0px auto;
+  .finish-review-headline {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .finish-review-description {
+    font-size: 16px;
+  }
+  .finish-reviews-comment-container {
+    .finish-review-comment-headline {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    #finishReviewContent {
+      height: 120px;
+      width: 90%;
+      margin: 5px auto 0px;
+    }
+  }
+  .finish-reviews-button-container {
+    text-align: right;
+    padding-right: 5%;
+    .finish-reviews-submit-button {
+      margin-top: 20px;
+      height: 30px;
+      line-height: 25px;
+    }
+  }
+  .finish-reviews-show-after {
+    display: none;
+  }
+}
+
+.finish-reviews-stars-container:not(:checked) > input {
+  display: none;
+}
+.finish-reviews-stars-container:not(:checked) > label {
+  float: right;
+  width: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.finish-reviews-stars-container > input:checked ~ label .icon-star {
+  color: #ffc700;
+}
+.finish-reviews-stars-container:not(:checked) > label:hover .icon-star,
+.finish-reviews-stars-container:not(:checked) > label:hover ~ label .icon-star {
+  color: #deb217;
+}

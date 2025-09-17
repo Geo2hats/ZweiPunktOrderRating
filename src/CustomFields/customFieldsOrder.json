@@ -1,0 +1,41 @@
+{
+  "name": "custom_rating_order",
+  "config": {
+    "label": {
+      "en-GB": "Rating of the order",
+      "de-DE": "Bewertung der Bestellung"
+    }
+  },
+  "relations": [
+    {
+      "entityName": "order"
+    }
+  ],
+  "customFields": [
+    {
+      "name": "custom_rating_order_review",
+      "type": "number",
+      "config": {
+        "numberType": "int",
+        "componentName": "sw-field",
+        "customFieldType": "number",
+        "label": {
+          "en-GB": "Number of stars of the rating",
+          "de-DE": "Anzahl der Sterne der Bewertung"
+        }
+      }
+    },
+    {
+      "name": "custom_rating_order_review_comment",
+      "type": "textEditor",
+      "config": {
+        "componentName": "sw-text-editor",
+        "customFieldType": "textEditor",
+        "label": {
+          "en-GB": "Comment of the customer on the rating:",
+          "de-DE": "Kommentar des Kunden zur Bewertung:"
+        }
+      }
+    }
+  ]
+}

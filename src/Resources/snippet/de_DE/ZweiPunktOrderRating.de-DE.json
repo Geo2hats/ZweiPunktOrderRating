@@ -1,0 +1,12 @@
+{
+  "zweipunkt": {
+    "review": {
+      "headline": "Geben Sie eine Bewertung ab!",
+      "description": "Wie bewerten Sie den Bestellprozess?",
+      "errorMessage": "Bei der Speicherung der Bewertung ist leider etwas schief gelaufen.",
+      "successMessage": "Vielen Dank für Ihre Bewertung!",
+      "comment": "Möchten Sie uns zusätzliches Feedback geben?",
+      "submitButton": "Absenden"
+    }
+  }
+}
