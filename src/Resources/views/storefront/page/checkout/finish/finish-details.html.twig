@@ -4,7 +4,9 @@
     {{ parent() }}
     {% if page.showOrderReview.reviewActive %}
         <!-- Hidden elements for JavaScript plugin -->
-        <div class="finish-ordernumber" data-order-number="{{ page.order.orderNumber }}" style="display: none;"></div>
+        <div class="finish-ordernumber" 
+             data-order-number="{{ page.order.orderNumber }}" 
+             style="display: none;"></div>
         <div class="flashbags"></div>
         
         <div class="finish-raiting" style="background-color: {{ page.showOrderReview.reviewBackgroundColor }}">
@@ -32,6 +34,7 @@
                             type="submit"
                             id="reviewSubmitButton"
                             class="btn btn-primary finish-reviews-submit-button"
+                            data-language-id="{{ context.languageId }}"
                             style="background-color: {{ page.showOrderReview.reviewButtonColor }}; border-color: {{ page.showOrderReview.reviewButtonColor }}">
                         {{ "zweipunkt.review.submitButton"|trans }}
                     </button>

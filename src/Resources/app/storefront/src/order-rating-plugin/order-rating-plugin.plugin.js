@@ -53,13 +53,20 @@ export default class OrderRatingPlugin extends Plugin {
 
         const orderNumber = this._orderNumberContainer.getAttribute('data-order-number');
         const comment = this._reviewContentInput.value;
-
+        
+        // Get the language ID from the Twig template data attribute
+        const languageId = this._reviewSubmitButton.getAttribute('data-language-id');
         if (rating) {
             let data = {
                 reviewCount: rating,
                 ordernumber: orderNumber,
                 comment: comment
             };
+            
+            // Add language ID from Twig context
+            if (languageId) {
+                data.languageId = languageId;
+            }
 
             this._httpClient.post('/order/rating', JSON.stringify(data), this._setContent.bind(this));
         }
